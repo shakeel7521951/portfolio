@@ -51,11 +51,11 @@ const Footer = () => {
                     <div className='col-12 col-md-3 mx-auto text-center text-md-start'>
                         <h5 className='font-weight-bold textRed my-3'>Services</h5>
                         <ul className='d-flex flex-column gap-2 mx-auto'>
-                            <li>Web Development</li>
-                            <li>WordPress Development</li>
-                            <li>Data Science</li>
-                            <li>UI/UX Design</li>
-                            <li>SEO Services</li>
+                            <li onClick={()=>window.location.href="/web-development"}>Web Development</li>
+                            <li onClick={()=>window.location.href="/wordpress"}>WordPress Development</li>
+                            <li onClick={()=>window.location.href="/data-science"}>Data Science</li>
+                            <li onClick={()=>window.location.href="/web-development"}>UI/UX Design</li>
+                            <li onClick={()=>window.location.href="/web-development"}>SEO Services</li>
                         </ul>
                     </div>
 
