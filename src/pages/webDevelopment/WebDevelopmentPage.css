@@ -1,0 +1,26 @@
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style-type: none;
+}
+
+.tech-list li {
+  background: linear-gradient(90deg, #000000, #272a2e);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+
+.contact-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.contact-btn:hover {
+  background-color: #0056b3;
+}

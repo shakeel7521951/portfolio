@@ -1,0 +1,279 @@
+ul {
+    list-style: none;
+}
+
+li {
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 0.3s ease;
+}
+
+ul li:hover {
+    color: #ff4757;
+    transition: all 0.3s ease;
+}
+
+/* Home Component */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: black;
+    color: white;
+    padding: 4px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+    transform: translateY(-4px);
+    color: red;
+}
+
+.home-image {
+    width: 250px;
+    height: 368px;
+    border-radius: 50%;
+    opacity: 0.8;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2), 0px 8px 20px rgba(128, 128, 128, 0.3);
+}
+@media (max-width:768px) {
+    .home-image{
+        width: 120px;
+        height: 120px;
+        margin-top: 10px;
+        display: none;
+    }
+}
+.carousel-item-padding-40-px{
+    padding: 10px;
+    padding-bottom: 40px;
+}
+.custom-dot-list-style li button {
+    border: none;
+}
+.cart {
+    min-height: 230px;
+    max-width: 320px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0px 4px 18px rgba(255, 255, 255, 0.1), 0px 4px 18px rgba(128, 128, 128, 0.1);
+    background-color: transparent;
+    transition: transform 0.3s ease;
+}
+
+.cart .arrow {
+    display: none;
+    position: absolute;
+    bottom: 15px;
+}
+
+.cart:hover .arrow {
+    display: block;
+}
+
+.cart:hover {
+    background: linear-gradient(180deg, #000000, #32363b);
+    transform: translateY(-8px);
+}
+
+.project-cart {
+    height: 330px;
+}
+
+.project-cart img {
+    width: 100%;
+    height: 50%;
+    border-radius: 5px;
+    transition: transform 0.9s ease;
+}
+
+.project-cart:hover {
+    transform: none;
+}
+
+.project-cart img:hover {
+    transform: scale(1.06);
+}
+
+.project-icons {
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    padding: 6px;
+}
+.project-icons:hover{
+    background-color: #ff014f;
+}
+.resume {
+    padding-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.resume h4 {
+    font-size: 19px;
+}
+
+.activeResume {
+    border: 1px solid red;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.flex-item {
+    flex: 1;
+    min-width: 300px;
+    max-width: 48%;
+}
+
+.education-main {
+    position: relative;
+    border-left: 3px solid black;
+}
+
+.education {
+    margin-left: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #212427, #32363b);
+    box-shadow: 0px 4px 18px rgba(255, 255, 255, 0.1), 0px 4px 18px rgba(128, 128, 128, 0.1);
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    left: -39px;
+    top: 35%;
+    border: 2px solid black;
+    background-color: rgb(99, 96, 96);
+    transition: background-color 0.3s ease;
+}
+
+.connect {
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+    left: -23px;
+    top: 30%;
+    border-radius: 10px;
+    border: none;
+}
+
+.result {
+    box-shadow: 0px 4px 18px rgba(255, 255, 255, 0.1), 0px 4px 18px rgba(128, 128, 128, 0.1);
+}
+
+.education:hover .circle {
+
+    background-color: red;
+}
+
+@media (max-width: 768px) {
+    .flex-item {
+        max-width: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    .connect {
+        top: 32%;
+    }
+    .footer-text{
+        font-size: 13px;
+    }
+}
+
+/*  */
+/* skills */
+.progress-container {
+    width: 100%;
+    background-color: #f6e3e3;
+    border-radius: 10px;
+    height: 8px;
+    overflow: hidden;
+    margin-top: 5px;
+    position: relative;
+}
+
+/* Progress Fill */
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, rgb(100, 100, 247) 20%, pink 50%, rgb(246, 73, 73) 100%);
+    border-radius: 10px;
+    transition: width 0.4s ease-in-out;
+    animation: fillAnimation 1.5s forwards;
+}
+
+@keyframes fillAnimation {
+    from {
+        width: 0;
+    }
+
+    to {}
+}
+
+.contact input, .contact textarea, .contact button {
+    border-radius: 5px;
+    padding: 6px;
+    border: none;
+    outline: none;
+    color: white;
+    box-shadow: 0px 4px 18px rgba(255, 255, 255, 0.1), 0px 4px 18px rgba(128, 128, 128, 0.1);
+    background: linear-gradient(90deg, #212427, #32363b);
+    border-bottom: 1px solid #aba9a9;
+    transition: all 0.3s ease;
+}
+
+.contact input:hover, .contact textarea:hover, .contact button:hover {
+    box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.15), 0px 6px 20px rgba(128, 128, 128, 0.15);
+    transform: scale(1.02);
+}
+
+.contact input:focus, .contact textarea:focus {
+    color: white;
+    border-bottom: 1px solid #ffffff;
+    box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.15), 0px 6px 20px rgba(128, 128, 128, 0.15);
+}
+
+.contact button:hover {
+    background: linear-gradient(90deg, #32363b, #212427);
+    cursor: pointer;
+}
+.footer-image{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 18px rgba(255, 255, 255, 0.2), 0px 4px 18px rgba(128, 128, 128, 0.2);
+    background-color: transparent;
+    border: 1px solid black;
+}
+.footer li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer li a:hover {
+    color: #ff4757;
+}
+ol,
+ul {
+  padding-left: 0 !important;
+}
