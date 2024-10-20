@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { motion } from "framer-motion"
 import ProfessionalSkills from './ProfessionalSkills';
 import Education from './education/Education';
+import Experience from './Experience/Experience';
 
 
 const Resume = () => {
@@ -19,18 +20,15 @@ const Resume = () => {
                         <h6 className='textRed text13 mb-0'>1+ YEAR OF EXPERIENCE</h6>
                         <h1 className='text-white font-weight-bold'>My Resume</h1>
                     </div>
-                    <div className='bg-black justify-content-between d-flex text-white rounded align-items-center text-center'>
-                        <div className={`col-3 resume ${active === 'education' ? 'activeResume' : ''}`} onClick={() => handleActive('education')}>
+                    <div className='justify-content-between d-flex text-white rounded align-items-center text-center mx-auto resume-bar' style={{width:"95%"}}>
+                        <div className={`col-4 resume ${active === 'education' ? 'activeResume' : ''}`} onClick={() => handleActive('education')}>
                             <h4>Education</h4>
                         </div>
-                        <div className={`col-3 resume ${active === 'skills' ? 'activeResume' : ''}`} onClick={() => handleActive('skills')}>
+                        <div className={`col-4 resume ${active === 'skills' ? 'activeResume' : ''}`} onClick={() => handleActive('skills')}>
                             <h4>Professional Skills</h4>
                         </div>
-                        <div className={`col-3 resume ${active === 'experience' ? 'activeResume' : ''}`} onClick={() => handleActive("experience")}>
+                        <div className={`col-4 resume ${active === 'experience' ? 'activeResume' : ''}`} onClick={() => handleActive("experience")}>
                             <h4>Experience</h4>
-                        </div>
-                        <div className={`col-3 resume ${active === 'achievements' ? 'activeResume' : ''}`} onClick={() => handleActive("achievements")}>
-                            <h4>Achievements</h4>
                         </div>
                     </div>
                     {
@@ -38,7 +36,7 @@ const Resume = () => {
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1, transition: { duration: 0.5 } }} className='my-5'>
-                             <Education />
+                                <Education />
                             </motion.div>
                         )
                     }
@@ -55,8 +53,11 @@ const Resume = () => {
 
                     {
                         active === "experience" && (
-                            <motion.div className='row' initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0.5 } }} >
-
+                            <motion.div className='row'
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1, transition: { duration: 0.5 } }}
+                            >
+                                <Experience />
                             </motion.div>
                         )
                     }

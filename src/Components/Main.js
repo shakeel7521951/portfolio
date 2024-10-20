@@ -1,14 +1,14 @@
 import React from 'react'
 import Home from './Home'
 import Features from './Features';
-import Projects from './Projects';
 import Resume from './Resume/Resume';
 import Contact from './Contact';
+import Projects from './Projects';
 
 const Main = () => {
     return (
         <div>
-            <Home/>
+            <Home />
             <Features />
             <Projects />
             <Resume />

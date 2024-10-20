@@ -1,17 +1,17 @@
 import React from 'react';
-import educationData from './educationData';
-import SkillsProgression from './SkillsProgression';
+// import SkillsProgression from './SkillsProgression';
+import {ExperienceData, MachineLearningExperienceData} from './ExperinceData';
 
-const Education = () => {
+const Experience = () => {
     return (
-        <div className='col-12 col-md-11 mx-auto d-flex flex-wrap gap-5 justify-content-between'>
+        <div className='col-12 col-md-11 mx-auto d-flex flex-wrap gap-5 justify-content-between mt-5'>
             <div className='flex-item'>
-                <p className='textRed mb-0'>2018 - 2026</p>
-                <h2 className='font-weight-bold'>Education Quality</h2>
-                <div className='my-4 d-flex flex-column gap-4 education-main' style={{ minHeight: '640px' }}>
+                <p className='textRed mb-0'>2023-2024</p>
+                <h2 className='font-weight-bold'>Web Development</h2>
+                <div className='my-4 d-flex flex-column gap-4 education-main' style={{ minHeight: '400px' }}>
                     {
-                        educationData.map((data) => (
-                            <div key={data.id} className='education'>
+                        ExperienceData.map((data) => (
+                            <div id={data.id} className='education'>
                                 <p className='circle'></p>
                                 <hr className='connect text-info' />
                                 <div className='content'>
@@ -30,18 +30,18 @@ const Education = () => {
                 </div>
             </div>
             <div className='flex-item'>
-                <p className='textRed mb-0'>2020 - 2024</p>
-                <h2 className='font-weight-bold'>Skills Progression</h2>
-                <div className='my-4 d-flex flex-column gap-4 education-main' style={{ minHeight: '640px' }}>
+                <p className='textRed mb-0'>2024-Present</p>
+                <h2 className='font-weight-bold'>Machine Learning</h2>
+                <div className='my-4 d-flex flex-column gap-4 education-main' style={{ minHeight: '400px' }}>
                     {
-                        SkillsProgression.map((data) => (
-                            <div key={data.id} className='education'>
+                        MachineLearningExperienceData.map((data) => (
+                            <div id={data.id} className='education'>
                                 <p className='circle'></p>
                                 <hr className='connect text-info' />
                                 <div className='content'>
                                     <div className='d-flex justify-content-between align-items-center'>
                                         <div>
-                                            <h4 className='text-white font-weight-bold mb-0'>{data.title}</h4>
+                                            <h5 className='text-white font-weight-bold mb-0'>{data.title}</h5>
                                             <p className='text13'>{data.institute} <span>({data.duration})</span></p>
                                         </div>
                                         <span className='textRed result my-auto p-1 rounded text13 px-2 bg-black '>{data.result}</span>
@@ -57,4 +57,4 @@ const Education = () => {
     )
 }
 
-export default Education
+export default Experience;

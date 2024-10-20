@@ -1,17 +1,75 @@
-ul {
-    list-style: none;
+.container-fluid {
+    background-color: #32363b;
 }
 
-li {
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header ul {
+    list-style: none;
+    padding: 0;
+}
+
+.header li {
     cursor: pointer;
     font-family: sans-serif;
-    transition: color 0.3s ease;
+    position: relative;
+    transition: color 0.4s ease, transform 0.4s ease;
 }
 
-ul li:hover {
-    color: #ff4757;
-    transition: all 0.3s ease;
+.header ul li:hover {
+    color: #ff4757; 
+    transform: scale(1.1);
 }
+
+.navbar-toggler {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem; 
+    color: #ff4757; 
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+@media (max-width: 767.98px) {
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-toggler ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute; 
+        top: 60px;
+        right: 0; 
+        background-color: #32363b; 
+        width: 100%; 
+        z-index: 1000; 
+    }
+
+    .navbar-toggler ul.open {
+        display: block;
+        padding: 0; 
+    }
+
+    .navbar-toggler li {
+        padding: 20px 0; 
+    }
+    
+    .d-md-none {
+        margin-top: 1rem; 
+    }
+
+    .d-md-flex {
+        display: none; 
+    }
+}
+
 
 /* Home Component */
 .social-icon {
@@ -39,24 +97,28 @@ ul li:hover {
     width: 250px;
     height: 368px;
     border-radius: 50%;
-    opacity: 0.8;
+    opacity: 0.7;
     box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2), 0px 8px 20px rgba(128, 128, 128, 0.3);
 }
+
 @media (max-width:768px) {
-    .home-image{
+    .home-image {
         width: 120px;
         height: 120px;
         margin-top: 10px;
         display: none;
     }
 }
-.carousel-item-padding-40-px{
+
+.carousel-item-padding-40-px {
     padding: 10px;
     padding-bottom: 40px;
 }
+
 .custom-dot-list-style li button {
     border: none;
 }
+
 .cart {
     min-height: 230px;
     max-width: 320px;
@@ -109,9 +171,11 @@ ul li:hover {
     border-radius: 50%;
     padding: 6px;
 }
-.project-icons:hover{
+
+.project-icons:hover {
     background-color: #ff014f;
 }
+
 .resume {
     padding-top: 10px;
     border-radius: 4px;
@@ -195,7 +259,8 @@ ul li:hover {
     .connect {
         top: 32%;
     }
-    .footer-text{
+
+    .footer-text {
         font-size: 13px;
     }
 }
@@ -229,7 +294,9 @@ ul li:hover {
     to {}
 }
 
-.contact input, .contact textarea, .contact button {
+.contact input,
+.contact textarea,
+.contact button {
     border-radius: 5px;
     padding: 6px;
     border: none;
@@ -241,12 +308,15 @@ ul li:hover {
     transition: all 0.3s ease;
 }
 
-.contact input:hover, .contact textarea:hover, .contact button:hover {
+.contact input:hover,
+.contact textarea:hover,
+.contact button:hover {
     box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.15), 0px 6px 20px rgba(128, 128, 128, 0.15);
     transform: scale(1.02);
 }
 
-.contact input:focus, .contact textarea:focus {
+.contact input:focus,
+.contact textarea:focus {
     color: white;
     border-bottom: 1px solid #ffffff;
     box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.15), 0px 6px 20px rgba(128, 128, 128, 0.15);
@@ -256,7 +326,8 @@ ul li:hover {
     background: linear-gradient(90deg, #32363b, #212427);
     cursor: pointer;
 }
-.footer-image{
+
+.footer-image {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -264,16 +335,36 @@ ul li:hover {
     background-color: transparent;
     border: 1px solid black;
 }
+
 .footer li a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
+.footer li{
+    transition: color 0.3s ease;
+    list-style: none;
+    cursor: pointer;
+}
+.footer li:hover{
+    color: #ff4757;
+}
 
 .footer li a:hover {
     color: #ff4757;
 }
+
 ol,
 ul {
-  padding-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.header {
+    margin-bottom: 5px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2), 0px 4px 8px rgba(128, 128, 128, 0.3);
+}
+
+.resume-bar {
+    background: linear-gradient(180deg, #000000, #32363b);
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2), 0px 4px 8px rgba(128, 128, 128, 0.3);
 }

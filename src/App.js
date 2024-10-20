@@ -7,6 +7,7 @@ import Main from './Components/Main';
 import WebDevelopmentPage from './pages/webDevelopment/webDevelopment';
 import DataScience from './pages/datascience/DataScience';
 import WordPressPage from './pages/wordpress/Wordpress';
+import ProjectDetail from './Components/projects/ProjectDetailPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/web-development" element={<WebDevelopmentPage />} />
           <Route path='/data-science' element={<DataScience />} />
           <Route path='/wordpress' element={<WordPressPage />} />
+          <Route path='/projectDetail/:id' element={<ProjectDetail />} />
         </Routes>
         <Footer />
       </div>

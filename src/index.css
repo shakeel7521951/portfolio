@@ -3,11 +3,6 @@
   padding: 0;
   font-family: sans-serif;
 }
-.sticky-navbar {
-  position: sticky;
-  top: 0;
-  z-index: 199;
-}
 .bgColor{
   background-color: #32363b;
 }

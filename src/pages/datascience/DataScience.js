@@ -20,7 +20,7 @@ const DataScience = () => {
   ];
 
   const projects = [
-      ];
+  ];
 
   return (
     <div className="container-fluid">
@@ -115,10 +115,12 @@ const DataScience = () => {
           </section>
 
           {/* Contact Section */}
-          <section className="my-4">
+          <section className="my-4">  
             <h2 className="text-white">Want to collaborate?</h2>
             <p>Feel free to reach out if you're looking for a data scientist to help with your project!</p>
-            <a href="mailto:shakeel752195@gmail.com" className="contact-btn">Contact Me</a>
+            <a href="https://wa.me/03207521951" className="contact-btn" target="_blank" rel="noopener noreferrer">
+              Contact Me
+            </a>
           </section>
         </div>
       </div>

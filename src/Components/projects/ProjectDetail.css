@@ -1,0 +1,28 @@
+.project-main-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: calc(33.333% - 30px);
+    height: 200px;
+    border-radius: 5px;
+}
+
+h3 {
+    padding-bottom: 10px;
+}
