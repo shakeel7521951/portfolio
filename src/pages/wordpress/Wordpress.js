@@ -88,7 +88,7 @@ const WordPressPage = () => {
           <section className="my-4">
             <h2 className="text-white">Want to collaborate?</h2>
             <p>Feel free to reach out if you're looking for a WordPress developer to help with your project!</p>
-            <a href="https://wa.me/03207521951" className="contact-btn" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/+923207521951" className="contact-btn" target="_blank" rel="noopener noreferrer">
               Contact Me
             </a>
           </section>
