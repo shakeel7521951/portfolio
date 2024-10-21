@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className='row'>
         <div className='col-12 col-md-11 mx-auto textColor p-2 justify-content-between d-block d-md-flex'>
           <div className='d-flex align-items-center justify-content-between'>
-            <img src={logo} onClick={window.location.href="/"} alt='Profile logo' className='cursor-pointer' style={{ height: '50px', width: "90px" }} />
+            <img src={logo} onClick={()=>window.location.href="/"} alt='Profile logo' className='cursor-pointer' style={{ height: '50px', width: "90px" }} />
             <button onClick={() => setIsOpen(!isOpen)} className='navbar-toggler d-md-none fs-2 me-3'>
               {isOpen ? '✖' : '☰'}
             </button>
