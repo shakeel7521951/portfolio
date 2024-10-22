@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import contact from '../Images/contact.jpg';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import emailjs from '@emailjs/browser';
@@ -6,11 +6,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
-
+    const [loading,setLoading] = useState(false);
     const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setLoading(true)
 
         emailjs
             .sendForm('service_xtag0qm', 'template_xja3lz8', form.current, {
@@ -22,6 +23,7 @@ const Contact = () => {
                         position: "top-center",
                     })
                     form.current.reset(); 
+                    setLoading(false)
                 },
                 (error) => {
                     toast.error("Something went wrong.Please try again later!", {
@@ -83,7 +85,7 @@ const Contact = () => {
                                 <textarea name='message' required className='form-control' placeholder='Enter your message' style={{ minHeight: "190px" }} aria-label="Message"></textarea>
                             </div>
                             <div className='text-center mt-4'>
-                                <button type='submit' value="Send" className='btn btn-dark w-100 p-2'>Send Message</button>
+                                <button type='submit' value="Send" className='btn btn-dark w-100 p-2'>{loading?"Sending...":"Send Message"}</button>
                             </div>
                         </form>
                     </div>
