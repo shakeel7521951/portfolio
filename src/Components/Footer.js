@@ -28,7 +28,7 @@ const Footer = () => {
                             <a href="https://web.facebook.com/profile.php?id=100083701840637" target="_blank" rel="noopener noreferrer" className="social-icon">
                                 <FaFacebookF />
                             </a>
-                            <a href='https://www.instagram.com/shakeel_227/' target='_blank' rel='noopener noreferrer' className='social-icon '>
+                            <a href='https://www.instagram.com/shakeel.developer.pro' target='_blank' rel='noopener noreferrer' className='social-icon '>
                                 <FaInstagram />
                             </a>
                             <a href='https://pk.linkedin.com/in/muhammad-shakeel-b048b0301' target='_blank' rel='noopener noreferrer' className='social-icon'>

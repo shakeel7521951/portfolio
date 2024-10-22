@@ -31,7 +31,7 @@ const Home = () => {
                                 <h6 className='font-weight-normal py-1'>FIND ME IN</h6>
                                 <div className='d-flex gap-2 align-items-center text-center'>
                                     <a href="https://web.facebook.com/profile.php?id=100083701840637" target="_blank" rel="noopener noreferrer" className="social-icon"> <FaFacebookF /> </a>
-                                    <a href='https://www.instagram.com/shakeel_227/' target='_blank' rel='noopener noreferrer' className='social-icon'><FaInstagram  /></a>
+                                    <a href='https://www.instagram.com/shakeel.developer.pro' target='_blank' rel='noopener noreferrer' className='social-icon'><FaInstagram  /></a>
                                     <a href='https://pk.linkedin.com/in/muhammad-shakeel-b048b0301' target='_blank' rel='noopener noreferrer' className='social-icon'><FaLinkedinIn  /></a>
                                 </div>
                             </div>
