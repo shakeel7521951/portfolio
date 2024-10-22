@@ -40,7 +40,7 @@ const Navbar = () => {
                 className='cursor-pointer' 
                 style={{ height: '50px', width: "90px" }} 
               />
-            <button onClick={() => setIsOpen(!isOpen)} className='navbar-toggler d-md-none fs-2 me-3'>
+            <button onClick={() => setIsOpen(!isOpen)} className='navbar-toggler d-md-none mt-2 fs-1 me-3'>
               {isOpen ? '✖' : '☰'}
             </button>
           </div>
