@@ -20,12 +20,12 @@ const Resume = () => {
                         <h6 className='textRed text13 mb-0'>1+ YEAR OF EXPERIENCE</h6>
                         <h1 className='text-white font-weight-bold'>My Resume</h1>
                     </div>
-                    <div className='justify-content-between d-flex text-white rounded align-items-center text-center mx-auto resume-bar' style={{width:"95%"}}>
+                    <div className='justify-content-between d-flex text-white rounded align-items-center text-center mx-auto resume-bar mt-2' style={{width:"95%"}}>
                         <div className={`col-4 resume ${active === 'education' ? 'activeResume' : ''}`} onClick={() => handleActive('education')}>
                             <h4>Education</h4>
                         </div>
                         <div className={`col-4 resume ${active === 'skills' ? 'activeResume' : ''}`} onClick={() => handleActive('skills')}>
-                            <h4>Professional Skills</h4>
+                        <h4><span className='d-none d-md-inline'>Professional</span> Skills</h4>
                         </div>
                         <div className={`col-4 resume ${active === 'experience' ? 'activeResume' : ''}`} onClick={() => handleActive("experience")}>
                             <h4>Experience</h4>

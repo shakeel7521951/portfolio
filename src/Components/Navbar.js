@@ -25,7 +25,7 @@ const Navbar = () => {
         window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
       }
     }
-    setIsOpen(false); // Close the menu after clicking a link
+    setIsOpen(false); 
   };
 
   return (
@@ -44,6 +44,8 @@ const Navbar = () => {
               {isOpen ? '✖' : '☰'}
             </button>
           </div>
+
+          {/* Desktop Menu */}
           <ul className={`d-none d-md-flex gap-5 align-items-center my-auto`}>
             {navLinkData.map((navlink) => (
               <li key={navlink.id}>
@@ -60,24 +62,24 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          {isOpen && (
-            <ul className='d-md-none mt-3'>
-              {navLinkData.map((navlink) => (
-                <li key={navlink.id}>
-                  <Link
-                    onClick={() => handleClick(navlink.link)}
-                    to={navlink.link}
-                    spy={true}
-                    activeClass='active'
-                    duration={500}
-                    offset={-30}
-                  >
-                    {navlink.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
+
+          {/* Mobile Menu */}
+          <ul className={`mobile-menu ${isOpen ? 'open' : ''}`}>
+            {navLinkData.map((navlink) => (
+              <li key={navlink.id}>
+                <Link
+                  onClick={() => handleClick(navlink.link)}
+                  to={navlink.link}
+                  spy={true}
+                  activeClass='active'
+                  duration={500}
+                  offset={-30}
+                >
+                  {navlink.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

@@ -11,6 +11,7 @@
 .header ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .header li {
@@ -21,54 +22,69 @@
 }
 
 .header ul li:hover {
-    color: #ff4757; 
+    color: #ff4757;
     transform: scale(1.1);
 }
 
 .navbar-toggler {
     background: transparent;
     border: none;
-    font-size: 1.5rem; 
-    color: #ff4757; 
+    font-size: 1.5rem;
+    color: #ff4757;
     cursor: pointer;
     position: absolute;
     right: 0;
     top: 10px;
 }
-
 @media (max-width: 767.98px) {
     .navbar-toggler {
         display: block;
     }
 
-    .navbar-toggler ul {
-        display: flex;
+    .mobile-menu {
+        display: none;
         flex-direction: column;
-        position: absolute; 
-        top: 60px;
-        right: 0; 
-        background-color: #32363b; 
-        width: 100%; 
-        z-index: 1000; 
-    }
-
-    .navbar-toggler ul.open {
-        display: block;
+        position: fixed;
+        top: 7.6%; 
+        right: 0;
+        background-color: #32363b;
+        width: 30%; 
+        height: 100vh; 
+        z-index: 1000;
+        justify-content: flex-start; 
+        align-items: center;
         padding: 0; 
+        margin: 0; 
+        transition: transform 0.5s ease-in-out; 
+        transform: translateX(100%); 
     }
 
-    .navbar-toggler li {
-        padding: 20px 0; 
+    .mobile-menu.open {
+        transform: translateX(0);
+        display: flex; 
     }
-    
-    .d-md-none {
-        margin-top: 1rem; 
+
+    .mobile-menu li {
+        padding: 20px 0;
+        text-align: center;
+        width: 100%;
     }
 
     .d-md-flex {
-        display: none; 
+        display: none;
     }
 }
+
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none !important;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+}
+
 
 
 /* Home Component */
