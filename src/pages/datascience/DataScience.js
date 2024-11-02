@@ -3,6 +3,7 @@ import { FaPython, FaGithub } from 'react-icons/fa';
 import { SiTensorflow, SiPandas, SiNumpy, SiScikitlearn, SiPlotly, SiJupyter } from 'react-icons/si';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { CiGlobe } from 'react-icons/ci';
+import { projects } from '../../Components/projects/ProjectsData';
 
 const DataScience = () => {
   const dataScienceSkills = [
@@ -19,8 +20,7 @@ const DataScience = () => {
     { name: 'Data Science', percentage: '70%', level: 'Expert', icon: <SiJupyter aria-label="Jupyter" /> },
   ];
 
-  const projects = [
-  ];
+  const dataScienceProjects = projects.filter((project) => project.category === 'dataScience');
 
   return (
     <div className="container-fluid">
@@ -97,25 +97,44 @@ const DataScience = () => {
           <section className="my-4">
             <h2 className="text-white">My Projects</h2>
             <div className='d-flex flex-wrap gap-5'>
-              <h1 className='text-center mx-auto mb-4 textRed'>Not Available</h1>
-              {projects.map((project, index) => (
-                <div key={index} className="cart mx-auto project-cart p-3">
-                  <div className="d-flex justify-content-between align-items-center">
-                    <h2 className="text15 font-weight-bold textRed mt-3">{project.title}</h2>
-                    <div className="d-flex gap-2">
-                      <a href={project.github} aria-label="GitHub Repository"><FaGithub className="project-icons" /></a>
-                      <a href={project.live} aria-label="Live Demo"><CiGlobe className="project-icons" /></a>
+              {dataScienceProjects.length === 0 ? (
+                <h1 className='text-center mx-auto mb-4 textRed'>Not Available</h1>
+              ) : (
+                dataScienceProjects.map((project, index) => (
+                  <div key={index} className="cart mx-auto project-cart p-3" onClick={()=>window.location.href=`/projectDetail/${project.id}`}>
+                    <img src={project.image} alt={project.title} />
+                    <div className="d-flex justify-content-between align-items-center">
+                      <h2 className="text15 font-weight-bold textRed mt-3">{project.title}</h2>
+                      <div className="d-flex gap-2">
+                        <a
+                          href={project.githubLink}
+                          aria-label="GitHub Repository"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaGithub className="project-icons" />
+                        </a>
+                        <a
+                          href={project.projectLink}
+                          aria-label="Live Demo"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <CiGlobe className="project-icons" />
+                        </a>
+                      </div>
                     </div>
+                    <p className="text15 text-white mt-2">{project.description}</p>
+                    <FaArrowRightLong className="textRed text22 arrow" />
                   </div>
-                  <p className="text15 text-white mt-2">{project.description}</p>
-                  <FaArrowRightLong className="textRed text22 arrow" />
-                </div>
-              ))}
+                ))
+              )}
             </div>
           </section>
 
+
           {/* Contact Section */}
-          <section className="my-4">  
+          <section className="my-4">
             <h2 className="text-white">Want to collaborate?</h2>
             <p>Feel free to reach out if you're looking for a data scientist to help with your project!</p>
             <a href="https://wa.me/+923207521951" className="contact-btn" target="_blank" rel="noopener noreferrer">

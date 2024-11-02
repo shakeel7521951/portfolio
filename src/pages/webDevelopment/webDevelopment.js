@@ -5,6 +5,7 @@ import { SiExpress, SiMongodb } from 'react-icons/si';
 import { BsBootstrap } from 'react-icons/bs';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { CiGlobe } from 'react-icons/ci';
+import { projects } from '../../Components/projects/ProjectsData';
 
 const WebDevelopmentPage = () => {
   const webDevelopmentSkills = [
@@ -21,26 +22,30 @@ const WebDevelopmentPage = () => {
     { name: 'MongoDB', percentage: '88%', level: 'Proficient', icon: <SiMongodb aria-label="MongoDB" /> },
   ];
 
-  const projects = [
-    {
-      title: 'Social Media Clone',
-      description: 'Fast, secure hosting solutions that ensure your website stays online and performs reliably.',
-      github: '#',
-      live: '#',
-    },
-    {
-      title: 'Social Media Clone',
-      description: 'Fast, secure hosting solutions that ensure your website stays online and performs reliably.',
-      github: '#',
-      live: '#',
-    },
-    {
-      title: 'Social Media Clone',
-      description: 'Fast, secure hosting solutions that ensure your website stays online and performs reliably.',
-      github: '#',
-      live: '#',
-    },
-  ];
+  // const projects = [
+  //   {
+  //     title: 'Social Media Clone',
+  //     description: 'Fast, secure hosting solutions that ensure your website stays online and performs reliably.',
+  //     github: '#',
+  //     live: '#',
+  //   },
+  //   {
+  //     title: 'Social Media Clone',
+  //     description: 'Fast, secure hosting solutions that ensure your website stays online and performs reliably.',
+  //     github: '#',
+  //     live: '#',
+  //   },
+  //   {
+  //     title: 'Social Media Clone',
+  //     description: 'Fast, secure hosting solutions that ensure your website stays online and performs reliably.',
+  //     github: '#',
+  //     live: '#',
+  //   },
+  // ];
+
+  const webProjects = projects.filter((project) => project.category === "web");
+
+
 
   return (
     <div className="container-fluid">
@@ -119,17 +124,19 @@ const WebDevelopmentPage = () => {
           <section className="my-4">
             <h2 className="text-white">My Projects</h2>
             <div className='d-flex flex-wrap gap-5'>
-              {projects.map((project, index) => (
-                <div key={index} className="cart mx-auto project-cart p-3">
-                  {/* <img src={processor} alt='Processor' /> */}
+              {webProjects.map((project) => (
+                <div key={project.id} className="cart mx-auto project-cart p-3" onClick={() => window.location.href = `/projectDetail/${project.id}`}>
+                  <img src={project.image} alt={project.title} />
                   <div className="d-flex justify-content-between align-items-center">
                     <h2 className="text15 font-weight-bold textRed mt-3">{project.title}</h2>
                     <div className="d-flex gap-2">
-                      <a href={project.github} aria-label="GitHub Repository"><FaGithub className="project-icons" /></a>
-                      <a href={project.live} aria-label="Live Demo"><CiGlobe className="project-icons" /></a>
+                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository"><FaGithub className="project-icons" /></a>
+                      <a href={project.projectLink} target="_blank" rel="noopener noreferrer" aria-label="Live Demo"><CiGlobe className="project-icons" /></a>
                     </div>
                   </div>
-                  <p className="text15 text-white mt-2">{project.description}</p>
+                  <p className="text15 text-white mt-2">
+                    {project.description.split(" ").slice(0, 15).join(" ")}{project.description.split(" ").length > 15 ? "..." : ""}
+                  </p>
                   <FaArrowRightLong className="textRed text22 arrow" />
                 </div>
               ))}

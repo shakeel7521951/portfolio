@@ -46,7 +46,7 @@ const Projects = () => {
                         >
                             {
                                 projects.map((data) => (
-                                    <div onClick={()=>window.location.href=`/projectDetail/${data.id}`} key={data.id}  className='cart mx-auto project-cart p-3'>
+                                    <div onClick={() => window.location.href = `/projectDetail/${data.id}`} key={data.id} className='cart mx-auto project-cart p-3'>
                                         <img src={data.image} alt='Processor' />
                                         <div className='d-flex justify-content-between align-items-center'>
                                             <h2 className='text15 font-weight-bold textRed mt-3'>{data.title}</h2>
@@ -55,7 +55,9 @@ const Projects = () => {
                                                 <CiGlobe className='project-icons' onClick={() => window.location.href = data.projectLink} />
                                             </div>
                                         </div>
-                                        <p className='text15 text-white mt-2'>{data.description}</p>
+                                        <p className="text15 text-white mt-2">
+                                            {data.description.split(" ").slice(0, 15).join(" ")}{data.description.split(" ").length > 15 ? "..." : ""}
+                                        </p>
                                         <FaArrowRightLong className='textRed text22 arrow' />
                                     </div>
                                 ))
